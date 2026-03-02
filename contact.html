@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <style>
     .contact-section {
       padding: 5rem 0 7rem;
@@ -126,13 +127,6 @@
       margin-top: 1rem;
       line-height: 1.6;
     }
-    .psychology-today-cta {
-      background: var(--cream);
-      padding: 5rem 0;
-      text-align: center;
-    }
-    .psychology-today-cta h2 { margin-bottom: 1rem; }
-    .psychology-today-cta p { max-width: 520px; margin: 0 auto 2rem; color: var(--text-body); }
     @media (max-width: 900px) {
       .contact-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
@@ -156,7 +150,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Resources</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="https://www.psychologytoday.com" target="_blank" class="nav-cta">Book Now</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
       </ul>
     </nav>
   </header>
@@ -182,8 +176,7 @@
             <div class="contact-detail-icon">📍</div>
             <div class="contact-detail-text">
               <strong>Location</strong>
-              <span>Denver, Colorado<br/>
-              <small style="color:var(--text-light);">Exact address provided upon scheduling</small></span>
+              <span>3955 E Exposition Ave<br/>Denver, CO</span>
             </div>
           </div>
 
@@ -195,21 +188,6 @@
             </div>
           </div>
 
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📧</div>
-            <div class="contact-detail-text">
-              <strong>Email</strong>
-              <span><a href="mailto:hello@soulbodycounseling.com" style="color:var(--terracotta);">hello@soulbodycounseling.com</a></span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📞</div>
-            <div class="contact-detail-text">
-              <strong>Phone</strong>
-              <span>[Your phone number]</span>
-            </div>
-          </div>
 
           <div class="contact-notice">
             <p><strong>Note:</strong> This contact form is not monitored 24/7 and is not a crisis line. If you are in crisis or need immediate support, please contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> (call or text 988) or go to your nearest emergency room.</p>
@@ -219,7 +197,6 @@
         <div class="contact-form-wrapper">
           <h3>Send a message</h3>
           <p>I'll get back to you within 1-2 business days.</p>
-          <!-- NOTE: This form needs a backend or form service (Formspree, Netlify Forms, etc.) to actually send emails. See instructions in README. -->
           <form id="contactForm" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="form-group">
@@ -257,9 +234,12 @@
               <textarea id="message" name="message" placeholder="Tell me a little about what you're looking for — or just say hi."></textarea>
             </div>
             <div class="form-submit">
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
             </div>
-            <p class="form-legal">This form is not encrypted and should not be used to share sensitive personal or medical information. For scheduling, you can also use my <a href="https://www.psychologytoday.com" target="_blank" style="color:var(--terracotta);">Psychology Today profile</a>.</p>
+            <div id="formError" style="display:none; margin-top:1rem; padding:1rem; background:rgba(196,74,74,0.08); border:1px solid rgba(196,74,74,0.25); border-radius:var(--radius-sm); font-size:0.875rem; color:#a03030;">
+              Something went wrong — please try again or reach out through my <a href="contact.html" style="color:#a03030;">Psychology Today profile</a>.
+            </div>
+            <p class="form-legal">This form is not encrypted and should not be used to share sensitive personal or medical information.</p>
           </form>
           <div id="formSuccess" style="display:none; text-align:center; padding: 2rem;">
             <div style="font-size:2rem; margin-bottom: 1rem;">✓</div>
@@ -272,15 +252,6 @@
     </div>
   </section>
 
-  <!-- BOOK DIRECTLY -->
-  <section class="psychology-today-cta">
-    <div class="container">
-      <span class="section-label" style="justify-content:center;display:flex;">Ready to Schedule?</span>
-      <h2>Book directly through Psychology Today</h2>
-      <p>If you're ready to schedule, my Psychology Today profile has real-time availability and lets you book a free 15-minute consultation.</p>
-      <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">View My Profile &amp; Book</a>
-    </div>
-  </section>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -296,7 +267,7 @@
         <a href="services.html">Services</a>
         <a href="blog.html">Resources</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.psychologytoday.com" target="_blank">Book Now</a>
+        <a href="contact.html">Book Now</a>
       </div>
       <p class="footer-legal">© 2025 Soul Body Counseling · Denver, CO · All rights reserved<br/>
       <small>This website is for informational purposes only and does not constitute a therapeutic relationship.</small></p>
@@ -305,11 +276,33 @@
 
   <script src="main.js"></script>
   <script>
+const EMAILJS_PUBLIC_KEY  = '-hMHl29JBYNUIGgH5';
+    const EMAILJS_SERVICE_ID  = 'service_0xjzx2a';
+    const EMAILJS_TEMPLATE_ID = 'template_yinq1dh';
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
     function handleSubmit(e) {
       e.preventDefault();
-      // Replace with your actual form submission logic (Formspree, Netlify, etc.)
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      const form    = document.getElementById('contactForm');
+      const btn     = document.getElementById('submitBtn');
+      const errorEl = document.getElementById('formError');
+
+      btn.disabled        = true;
+      btn.textContent     = 'Sending…';
+      errorEl.style.display = 'none';
+
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+        .then(() => {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        })
+        .catch((err) => {
+          console.error('EmailJS error:', err);
+          errorEl.style.display  = 'block';
+          btn.disabled           = false;
+          btn.textContent        = 'Send Message';
+        });
     }
   </script>
 </body>
