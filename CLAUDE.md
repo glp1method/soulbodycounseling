@@ -27,8 +27,28 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 - Public Key: `-hMHl29JBYNUIGgH5`
 
 ## Voice & Tone
-Direct, grounded, honest. Not clinical or life-coach-y. Written for gay and queer men who are tired of managing. Key phrases from the about page should inform any new copy.
+Direct, grounded, honest. Not clinical or life-coach-y. Written for gay and queer men who are tired of managing. The about page is the voice benchmark — all new copy should match it.
+
+**Brand position:** "Grounded woo" — spiritual and somatic, but clinical and evidence-based. Not retreat-y.
+**Through line:** worth and power — this anchors all messaging.
+
+**Avoid these specifically:**
+- "journey" — therapy cliché
+- "non-judgmental" — overused jargon
+- "celebrated, not just tolerated" — slogan-y
+- "living more fully" — life-coach-y
+- "one-size-fits-all" — generic
+- "committed to making quality care accessible" — corporate
+- "modalities" — clinical jargon when used in client-facing copy
+- "meets your needs" / "meeting your needs" — corporate
+
+**EMDR description** — always use the theater metaphor from the about page: "terrible name for an effective treatment... you're not remembering the movie, you're in it... move from the screen to the back of the theater."
+
+## Hosting
+- GitHub Pages with custom domain: soulbodycounseling.com
+- DNS: GoDaddy A records → GitHub IPs, www CNAME → glp1method.github.io
 
 ## Workflow
 - Edit locally, preview with `start <file>.html`, then `git add`, `git commit`, `git push`
+- If push is rejected, run `git pull --rebase` then push again
 - All Psychology Today links have been removed — everything routes to contact.html
