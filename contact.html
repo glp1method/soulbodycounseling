@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Soul Body Counseling</title>
+  <meta name="description" content="Get in touch with Soul Body Counseling — integrative therapy in Denver, Colorado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-section {
+      padding: 5rem 0 7rem;
+      background: var(--warm-white);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 1.2rem; }
+    .contact-info p { font-size: 1.025rem; margin-bottom: 2rem; }
+    .contact-detail {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(196, 113, 74, 0.1);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-detail-text strong {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.2rem;
+    }
+    .contact-detail-text span {
+      font-size: 1rem;
+      color: var(--charcoal);
+    }
+    .contact-notice {
+      background: rgba(122, 158, 126, 0.12);
+      border: 1px solid rgba(122, 158, 126, 0.3);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .contact-notice p {
+      font-size: 0.875rem;
+      color: var(--charcoal-mid);
+      margin: 0;
+      line-height: 1.7;
+    }
+    .contact-notice strong { color: var(--charcoal); }
+
+    /* FORM */
+    .contact-form-wrapper {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-soft);
+    }
+    .contact-form-wrapper h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-form-wrapper > p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal-mid);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      border: 1.5px solid rgba(196, 113, 74, 0.2);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--warm-white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--terracotta);
+      box-shadow: 0 0 0 3px rgba(196, 113, 74, 0.12);
+    }
+    .form-group textarea { min-height: 130px; resize: vertical; }
+    .form-submit {
+      margin-top: 0.5rem;
+    }
+    .form-submit .btn { width: 100%; justify-content: center; }
+    .form-legal {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+    .psychology-today-cta {
+      background: var(--cream);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .psychology-today-cta h2 { margin-bottom: 1rem; }
+    .psychology-today-cta p { max-width: 520px; margin: 0 auto 2rem; color: var(--text-body); }
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+        <span class="logo-sub">Counseling</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Resources</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="https://www.psychologytoday.com" target="_blank" class="nav-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">Contact</span>
+      <h1>Let's start a conversation</h1>
+      <p>No pressure. No long intake forms. Just a message.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <span class="section-label">Reach Out</span>
+          <h2>Getting here is the hardest part</h2>
+          <p>Whether you have questions, want to verify insurance, or just need to see if this feels right — I'm glad you're here. I respond to messages within 1-2 business days.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Location</strong>
+              <span>Denver, Colorado<br/>
+              <small style="color:var(--text-light);">Exact address provided upon scheduling</small></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">💻</div>
+            <div class="contact-detail-text">
+              <strong>Telehealth</strong>
+              <span>Available statewide across Colorado</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span><a href="mailto:hello@soulbodycounseling.com" style="color:var(--terracotta);">hello@soulbodycounseling.com</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              <span>[Your phone number]</span>
+            </div>
+          </div>
+
+          <div class="contact-notice">
+            <p><strong>Note:</strong> This contact form is not monitored 24/7 and is not a crisis line. If you are in crisis or need immediate support, please contact the <strong>988 Suicide &amp; Crisis Lifeline</strong> (call or text 988) or go to your nearest emergency room.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h3>Send a message</h3>
+          <p>I'll get back to you within 1-2 business days.</p>
+          <!-- NOTE: This form needs a backend or form service (Formspree, Netlify Forms, etc.) to actually send emails. See instructions in README. -->
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="(303) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="reason">What brings you here?</label>
+              <select id="reason" name="reason">
+                <option value="">Select an option</option>
+                <option>General inquiry</option>
+                <option>Verify insurance coverage</option>
+                <option>Schedule a free consultation</option>
+                <option>Trauma / EMDR therapy</option>
+                <option>LGBTQ+ affirming therapy</option>
+                <option>Substance use support</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a little about what you're looking for — or just say hi."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+            <p class="form-legal">This form is not encrypted and should not be used to share sensitive personal or medical information. For scheduling, you can also use my <a href="https://www.psychologytoday.com" target="_blank" style="color:var(--terracotta);">Psychology Today profile</a>.</p>
+          </form>
+          <div id="formSuccess" style="display:none; text-align:center; padding: 2rem;">
+            <div style="font-size:2rem; margin-bottom: 1rem;">✓</div>
+            <h4>Message sent</h4>
+            <p style="color:var(--text-light); margin-top:0.5rem;">I'll be in touch within 1-2 business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK DIRECTLY -->
+  <section class="psychology-today-cta">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">Ready to Schedule?</span>
+      <h2>Book directly through Psychology Today</h2>
+      <p>If you're ready to schedule, my Psychology Today profile has real-time availability and lets you book a free 15-minute consultation.</p>
+      <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">View My Profile &amp; Book</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo footer-logo">
+          <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+          <span class="logo-sub">Counseling</span>
+        </a>
+        <p>Integrative therapy for the whole you.<br />Denver, Colorado.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.psychologytoday.com" target="_blank">Book Now</a>
+      </div>
+      <p class="footer-legal">© 2025 Soul Body Counseling · Denver, CO · All rights reserved<br/>
+      <small>This website is for informational purposes only and does not constitute a therapeutic relationship.</small></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      // Replace with your actual form submission logic (Formspree, Netlify, etc.)
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

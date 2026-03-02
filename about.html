@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Soul Body Counseling</title>
+  <meta name="description" content="Learn about the integrative, affirming approach at Soul Body Counseling in Denver, Colorado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+      padding: 7rem 0;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(145deg, rgba(196, 113, 74, 0.15), rgba(122, 158, 126, 0.2));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      border: 2px dashed rgba(196, 113, 74, 0.25);
+    }
+    .about-photo-placeholder .photo-icon { font-size: 3rem; }
+    .about-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--terracotta);
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      box-shadow: var(--shadow-card);
+    }
+    .about-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+    .about-badge span {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      letter-spacing: 0.08em;
+    }
+    .about-content { padding-top: 1rem; }
+    .about-content h2 { margin-bottom: 1.5rem; }
+    .about-content p { margin-bottom: 1.2rem; font-size: 1.025rem; }
+    .credentials {
+      background: var(--cream);
+      padding: 7rem 0;
+    }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .credential-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+      border-top: 3px solid var(--terracotta);
+    }
+    .credential-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .credential-card p { font-size: 0.9rem; color: var(--text-light); }
+    .values-section { padding: 7rem 0; }
+    .values-section h2 { margin-bottom: 3rem; }
+    .values-list { display: flex; flex-direction: column; gap: 0; }
+    .value-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid rgba(196, 113, 74, 0.12);
+      align-items: start;
+    }
+    .value-item:last-child { border-bottom: none; }
+    .value-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: rgba(196, 113, 74, 0.25);
+      line-height: 1;
+    }
+    .value-item h4 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .value-item p { font-size: 0.95rem; color: var(--text-body); }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-badge { bottom: 12px; right: 12px; }
+      .credentials-grid { grid-template-columns: 1fr; }
+      .value-item { grid-template-columns: 60px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+        <span class="logo-sub">Counseling</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.psychologytoday.com" target="_blank" class="nav-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">About</span>
+      <h1>The person behind the practice</h1>
+      <p>Grounded in lived experience and trained in evidence-based care.</p>
+    </div>
+  </div>
+
+  <section style="background: var(--warm-white);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-photo-placeholder">
+            <span class="photo-icon">📷</span>
+            <span>Add your photo here</span>
+            <small style="opacity:0.6;">(Replace this placeholder in the HTML)</small>
+          </div>
+          <div class="about-badge">
+            <strong>Denver</strong>
+            <span>Colorado</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-label">Hello, I'm —</span>
+          <h2>[Your Name], LCSW</h2>
+          <!-- COPY NOTE: Replace the paragraphs below with your own bio -->
+          <p>I became a therapist because I believe that healing is not a linear path — and that the people most often failed by systems deserve the most thoughtful, affirming care. My work is rooted in the conviction that you already hold the wisdom you need; therapy is the space where we excavate it.</p>
+          <p>I've spent my career working with LGBTQ+ communities, trauma survivors, and individuals navigating substance use — not as separate "populations," but as whole human beings whose lives don't fit neatly into a single category. I don't pathologize; I accompany.</p>
+          <p>My training spans Gestalt therapy, EMDR, Motivational Interviewing, and guided imagery. But what I bring to the room is more than technique — it's presence, curiosity, and an unwillingness to pretend that healing happens without acknowledging the systems and structures that shape your life.</p>
+          <p>I see clients in-person in Denver and virtually across Colorado. I accept both insurance and private pay.</p>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">Book a Consultation</a>
+            <a href="services.html" class="btn btn-outline">View Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="credentials">
+    <div class="container">
+      <span class="section-label">Training &amp; Credentials</span>
+      <h2>The foundation beneath the work</h2>
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <h4>EMDR Certified</h4>
+          <p>Eye Movement Desensitization and Reprocessing for trauma processing and nervous system healing.</p>
+        </div>
+        <div class="credential-card">
+          <h4>Gestalt Therapy</h4>
+          <p>Present-moment, body-aware work rooted in the integration of thought, emotion, and sensation.</p>
+        </div>
+        <div class="credential-card">
+          <h4>Motivational Interviewing</h4>
+          <p>Evidence-based, client-centered approach to supporting change without judgment or coercion.</p>
+        </div>
+        <!-- Add more credentials as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section" style="background: var(--warm-white);">
+    <div class="container" style="max-width: 800px;">
+      <span class="section-label">What I Believe</span>
+      <h2>The values that guide this work</h2>
+      <div class="values-list">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <div>
+            <h4>You are the expert on your own life</h4>
+            <p>My role is not to tell you who you are or should be. It's to help you reconnect with the knowing you already carry.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <div>
+            <h4>Affirming care isn't optional — it's essential</h4>
+            <p>LGBTQ+ identities are not problems to be solved. Queer joy, queer grief, queer complexity all belong in the therapy room.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <div>
+            <h4>The body holds the story</h4>
+            <p>Integrative therapy means we don't leave your nervous system out of the conversation. Healing happens in the whole person.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <span class="value-num">04</span>
+          <div>
+            <h4>Shame has no seat at this table</h4>
+            <p>Whether you're navigating addiction, trauma, or something you've never said out loud — this is a judgment-free space.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to start?</h2>
+        <p>Free 15-minute consultations available. No pressure, just a conversation.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">Book a Consultation</a>
+        <a href="contact.html" class="btn btn-ghost-light">Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo footer-logo">
+          <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+          <span class="logo-sub">Counseling</span>
+        </a>
+        <p>Integrative therapy for the whole you.<br />Denver, Colorado.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.psychologytoday.com" target="_blank">Book Now</a>
+      </div>
+      <p class="footer-legal">© 2025 Soul Body Counseling · Denver, CO · All rights reserved<br/>
+      <small>This website is for informational purposes only and does not constitute a therapeutic relationship.</small></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

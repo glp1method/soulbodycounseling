@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Soul Body Counseling</title>
+  <meta name="description" content="Insights and resources on integrative therapy, LGBTQ+ mental health, trauma, and wellness from Soul Body Counseling in Denver." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .blog-section { padding: 5rem 0 7rem; background: var(--warm-white); }
+    .blog-intro { max-width: 640px; margin-bottom: 4rem; }
+    .blog-intro p { font-size: 1.05rem; margin-top: 1rem; }
+    .blog-filter {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .filter-tag {
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1.5px solid rgba(196, 113, 74, 0.25);
+      color: var(--charcoal-mid);
+      cursor: pointer;
+      transition: var(--transition);
+      background: transparent;
+      font-family: var(--font-body);
+    }
+    .filter-tag:hover, .filter-tag.active {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #fff;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .blog-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      border: 1px solid rgba(196, 113, 74, 0.08);
+    }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .blog-card-image {
+      height: 200px;
+      background: linear-gradient(135deg, rgba(196, 113, 74, 0.15), rgba(122, 158, 126, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+    .blog-card-image .post-category {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--terracotta);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+    }
+    .blog-card-body { padding: 1.8rem; }
+    .blog-card-meta {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.04em;
+    }
+    .blog-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.3;
+    }
+    .blog-card p {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .blog-card-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--terracotta);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .blog-card-link:hover { color: var(--terracotta-dark); }
+
+    .resources-section {
+      background: var(--cream);
+      padding: 7rem 0;
+    }
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .resource-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+    .resource-card:hover { transform: translateY(-2px); }
+    .resource-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: rgba(196, 113, 74, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .resource-card h4 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .resource-card p { font-size: 0.875rem; color: var(--text-light); margin-bottom: 0.5rem; }
+    .resource-card a { font-size: 0.82rem; color: var(--terracotta); font-weight: 500; }
+
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .resources-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+        <span class="logo-sub">Counseling</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.psychologytoday.com" target="_blank" class="nav-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">Resources</span>
+      <h1>Insights &amp; tools for the journey</h1>
+      <p>Practical perspectives on healing, identity, and living more fully.</p>
+    </div>
+  </div>
+
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-intro">
+        <span class="section-label">Latest Posts</span>
+        <p>These posts are meant to offer perspective and information — not clinical advice. If something resonates and you want to talk, the door is open.</p>
+      </div>
+
+      <div class="blog-filter">
+        <button class="filter-tag active">All</button>
+        <button class="filter-tag">Trauma &amp; EMDR</button>
+        <button class="filter-tag">LGBTQ+</button>
+        <button class="filter-tag">Substance Use</button>
+        <button class="filter-tag">Somatic Work</button>
+        <button class="filter-tag">Therapy 101</button>
+      </div>
+
+      <div class="blog-grid">
+        <!-- PLACEHOLDER POSTS — Replace with real content -->
+        <div class="blog-card">
+          <div class="blog-card-image">
+            🧠
+            <span class="post-category">Trauma &amp; EMDR</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-card-meta">Coming Soon</p>
+            <h3>What EMDR Actually Feels Like — And Why It Works</h3>
+            <p>A plain-language explanation of what happens in an EMDR session and why the research behind it is so compelling.</p>
+            <span class="blog-card-link">Coming soon →</span>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            🌈
+            <span class="post-category">LGBTQ+</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-card-meta">Coming Soon</p>
+            <h3>Finding a Therapist Who Actually Gets It: A Guide for Queer Clients</h3>
+            <p>What to look for, what to ask, and what red flags mean it's time to move on.</p>
+            <span class="blog-card-link">Coming soon →</span>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-image">
+            🌿
+            <span class="post-category">Substance Use</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-card-meta">Coming Soon</p>
+            <h3>Harm Reduction Isn't Giving Up: Rethinking Recovery</h3>
+            <p>Why the all-or-nothing approach to substance use often fails — and what the evidence actually supports.</p>
+            <span class="blog-card-link">Coming soon →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRISIS & COMMUNITY RESOURCES -->
+  <section class="resources-section">
+    <div class="container">
+      <span class="section-label">Community Resources</span>
+      <h2>You don't have to navigate this alone</h2>
+      <p style="margin-top: 0.5rem; max-width: 600px;">A curated list of trusted organizations and crisis resources — especially for the communities I serve.</p>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <div class="resource-icon">🆘</div>
+          <div>
+            <h4>988 Suicide &amp; Crisis Lifeline</h4>
+            <p>24/7 crisis support. Call or text 988 from anywhere in the US.</p>
+            <a href="https://988lifeline.org" target="_blank">988lifeline.org →</a>
+          </div>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🏳️‍🌈</div>
+          <div>
+            <h4>The Trevor Project</h4>
+            <p>Crisis intervention and suicide prevention for LGBTQ+ young people.</p>
+            <a href="https://www.thetrevorproject.org" target="_blank">thetrevorproject.org →</a>
+          </div>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🤝</div>
+          <div>
+            <h4>SAMHSA National Helpline</h4>
+            <p>Free, confidential treatment referrals for substance use. 1-800-662-4357.</p>
+            <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank">samhsa.gov →</a>
+          </div>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">💜</div>
+          <div>
+            <h4>Colorado LGBTQ Community Center</h4>
+            <p>Local Denver resource for LGBTQ+ community support, events, and services.</p>
+            <a href="https://coloradolgbtq.org" target="_blank">coloradolgbtq.org →</a>
+          </div>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🎗️</div>
+          <div>
+            <h4>Colorado HIV/AIDS Project</h4>
+            <p>Local support, education, and advocacy for people living with HIV in Colorado.</p>
+            <a href="https://www.coloradohivaidsproj.org" target="_blank">coloradohivaidsproj.org →</a>
+          </div>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">📱</div>
+          <div>
+            <h4>Crisis Text Line</h4>
+            <p>Text HOME to 741741 to connect with a trained crisis counselor 24/7.</p>
+            <a href="https://www.crisistextline.org" target="_blank">crisistextline.org →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Want to go deeper?</h2>
+        <p>Reading can only take you so far. If you're ready to do the work, I'm here.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">Book a Consultation</a>
+        <a href="contact.html" class="btn btn-ghost-light">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo footer-logo">
+          <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+          <span class="logo-sub">Counseling</span>
+        </a>
+        <p>Integrative therapy for the whole you.<br />Denver, Colorado.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.psychologytoday.com" target="_blank">Book Now</a>
+      </div>
+      <p class="footer-legal">© 2025 Soul Body Counseling · Denver, CO · All rights reserved<br/>
+      <small>This website is for informational purposes only and does not constitute a therapeutic relationship.</small></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

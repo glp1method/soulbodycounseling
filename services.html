@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Soul Body Counseling</title>
+  <meta name="description" content="Integrative therapy services including EMDR, Gestalt, trauma therapy, and LGBTQ+ affirming care in Denver, Colorado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .service-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      padding: 2.8rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(196, 113, 74, 0.1);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--terracotta), var(--sage));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(196, 113, 74, 0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .service-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .service-tag {
+      display: inline-block;
+      background: rgba(196, 113, 74, 0.1);
+      color: var(--terracotta-dark);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+    .fees-section {
+      background: var(--cream);
+      padding: 7rem 0;
+    }
+    .fees-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .fee-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+    .fee-card h4 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .fee-card .fee-amount {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--terracotta);
+      font-weight: 400;
+      line-height: 1.2;
+      margin: 0.5rem 0;
+    }
+    .fee-card p { font-size: 0.875rem; color: var(--text-light); }
+    .faq-section { padding: 7rem 0; }
+    .faq-list { max-width: 760px; margin: 3rem auto 0; }
+    .faq-item {
+      border-bottom: 1px solid rgba(196, 113, 74, 0.15);
+      padding: 1.8rem 0;
+    }
+    .faq-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item p { font-size: 0.95rem; color: var(--text-body); line-height: 1.8; }
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .fees-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+        <span class="logo-sub">Counseling</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="blog.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.psychologytoday.com" target="_blank" class="nav-cta">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label" style="justify-content:center;display:flex;">Services</span>
+      <h1>The work we do together</h1>
+      <p>Tailored, integrative care — never a one-size-fits-all approach.</p>
+    </div>
+  </div>
+
+  <!-- SERVICES GRID -->
+  <section style="background: var(--warm-white); padding: 5rem 0 7rem;">
+    <div class="container">
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">◎</div>
+          <h3>Individual Therapy</h3>
+          <p>One-on-one sessions designed around your specific needs, goals, and pace. Whether you're navigating a life transition, processing old wounds, or simply wanting to understand yourself more deeply — this is your space.</p>
+          <p>Sessions are 50 minutes and available in-person in Denver or virtually across Colorado.</p>
+          <div>
+            <span class="service-tag">Trauma</span>
+            <span class="service-tag">Anxiety &amp; Depression</span>
+            <span class="service-tag">Life Transitions</span>
+            <span class="service-tag">Relationships</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>LGBTQ+ Affirming Therapy</h3>
+          <p>Affirming care for gay, lesbian, bisexual, transgender, gender non-conforming, and queer individuals, as well as people living with HIV. Your identity is not a clinical issue — it's a whole life, and it deserves a therapist who actually gets it.</p>
+          <p>No explaining required. No tolerance pretending to be acceptance.</p>
+          <div>
+            <span class="service-tag">Identity</span>
+            <span class="service-tag">Coming Out</span>
+            <span class="service-tag">Queer Relationships</span>
+            <span class="service-tag">HIV+ Support</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">◈</div>
+          <h3>Trauma &amp; EMDR Therapy</h3>
+          <p>Trauma rewires the nervous system — and healing it requires more than just talking. EMDR (Eye Movement Desensitization and Reprocessing) is a structured, evidence-based approach that helps your brain process stuck memories and finally move forward.</p>
+          <p>Also incorporating somatic awareness and Gestalt work for whole-body healing.</p>
+          <div>
+            <span class="service-tag">PTSD</span>
+            <span class="service-tag">Complex Trauma</span>
+            <span class="service-tag">EMDR</span>
+            <span class="service-tag">Somatic Work</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⟡</div>
+          <h3>Substance Use &amp; Recovery Support</h3>
+          <p>Compassionate, non-judgmental support for people navigating their relationship with substances. Using Motivational Interviewing and harm reduction principles — meeting you where you are, not where someone else thinks you should be.</p>
+          <p>Whether you're questioning, cutting back, or in recovery, there's room for you here.</p>
+          <div>
+            <span class="service-tag">Harm Reduction</span>
+            <span class="service-tag">Motivational Interviewing</span>
+            <span class="service-tag">Recovery</span>
+            <span class="service-tag">Dual Diagnosis</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="fees-section">
+    <div class="container">
+      <span class="section-label">Rates &amp; Insurance</span>
+      <h2>Accessible care matters</h2>
+      <p style="max-width: 580px; margin-top: 0.5rem;">I accept both insurance and private pay. Contact me directly to verify your specific coverage.</p>
+      <div class="fees-grid">
+        <div class="fee-card">
+          <h4>Individual Session</h4>
+          <p class="fee-amount">$[X]</p>
+          <p>50-minute individual therapy session. Sliding scale available — ask me.</p>
+        </div>
+        <div class="fee-card">
+          <h4>Insurance</h4>
+          <p class="fee-amount" style="font-size: 1.8rem; padding-top: 0.4rem;">In-Network</p>
+          <p>I accept [list your insurances here]. Contact me to verify your benefits.</p>
+        </div>
+        <div class="fee-card">
+          <h4>Free Consultation</h4>
+          <p class="fee-amount" style="font-size: 1.8rem; padding-top: 0.4rem;">15 min</p>
+          <p>A no-pressure conversation to see if we're a good fit. Always free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" style="background: var(--warm-white);">
+    <div class="container">
+      <span class="section-label">Common Questions</span>
+      <h2 style="text-align: center;">What people ask before reaching out</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>What should I expect in the first session?</h4>
+          <p>The first session is mostly about getting to know each other. We'll talk about what brought you here, what you're hoping for, and whether my approach feels like a good fit. There's no pressure to dive deep right away — we move at your pace.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you offer virtual sessions?</h4>
+          <p>Yes. I see clients both in-person in Denver and virtually via a secure telehealth platform for anyone in Colorado. Many clients do a mix of both depending on their week.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How long does therapy take?</h4>
+          <p>It depends entirely on you and your goals. Some people come for a focused stretch of 3-6 months around a specific issue. Others work with me for years. We'll check in regularly about whether our work is meeting your needs.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do I have to identify as LGBTQ+ to work with you?</h4>
+          <p>Absolutely not. While I specialize in affirming care for LGBTQ+ communities, I welcome anyone who resonates with this approach and feels they'd benefit from this kind of work.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What if I've had bad experiences with therapy before?</h4>
+          <p>That's actually really useful information, and I'd want to hear about it. Previous experiences — especially negative ones — shape what you need and what you'd want to do differently. We'd start there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not sure where to start?</h2>
+        <p>A free 15-minute consultation is the easiest first step. No commitment required.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://www.psychologytoday.com" target="_blank" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="contact.html" class="btn btn-ghost-light">Ask a Question First</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo footer-logo">
+          <span class="logo-soul">Soul</span><span class="logo-body">Body</span>
+          <span class="logo-sub">Counseling</span>
+        </a>
+        <p>Integrative therapy for the whole you.<br />Denver, Colorado.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.psychologytoday.com" target="_blank">Book Now</a>
+      </div>
+      <p class="footer-legal">© 2025 Soul Body Counseling · Denver, CO · All rights reserved<br/>
+      <small>This website is for informational purposes only and does not constitute a therapeutic relationship.</small></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
