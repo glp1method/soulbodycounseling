@@ -54,12 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // Blog filter (simple tag filtering — no actual filtering since posts are placeholders)
+  // Blog filter
   const filterTags = document.querySelectorAll('.filter-tag');
-  filterTags.forEach(tag => {
-    tag.addEventListener('click', () => {
-      filterTags.forEach(t => t.classList.remove('active'));
-      tag.classList.add('active');
+  const blogCards = document.querySelectorAll('.blog-card[data-category]');
+
+  if (filterTags.length && blogCards.length) {
+    filterTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        filterTags.forEach(t => t.classList.remove('active'));
+        tag.classList.add('active');
+
+        const selected = tag.textContent.trim();
+
+        blogCards.forEach(card => {
+          const match = selected === 'All' || card.dataset.category === selected;
+          card.style.display = match ? '' : 'none';
+          if (match) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }
+        });
+      });
     });
-  });
+  }
 });
