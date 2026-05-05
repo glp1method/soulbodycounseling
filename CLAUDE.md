@@ -6,18 +6,23 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 **Live repo:** https://github.com/glp1method/soulbodycounseling
 
 ## Pages
-- `index.html` — Homepage
+- `index.html` — Homepage (includes LocalBusiness JSON-LD schema)
 - `about.html` — Bio and photo (Guilfoyle.jpg.jpeg)
-- `services.html` — Services, fees ($150/session), insurance
+- `services.html` — Therapy services + Wellness Sessions (Holy Fire Reiki), fees, insurance
 - `contact.html` — Contact form (EmailJS), office address
-- `blog.html` — Resources/blog (placeholder posts)
+- `blog.html` — Resources/blog
+- `blog-emdr.html` — "What EMDR Actually Feels Like — And Why It Works"
+- `blog-gay-men-carry.html` — "What Gay Men Carry That Nobody Talks About in Therapy"
+- `blog-harm-reduction.html` — "Harm Reduction Isn't Giving Up: Rethinking Recovery"
+- `sitemap.xml` — All 8 pages; submit to Google Search Console when pushing new posts
+- `robots.txt` — Allow all, points to sitemap
 - `styles.css` — All global styles
 - `main.js` — Nav toggle and shared JS
 
 ## Key Details
-- **Location:** 3955 E Exposition Ave, Denver, CO (in-person) + virtual across Colorado
+- **Location:** 3955 E Exposition Ave, Denver, CO 80209 (in-person) + virtual across Colorado
 - **Insurance:** Anthem, Cigna, United, Aetna
-- **Private pay:** $150/session
+- **Private pay:** $150/session (therapy) · $135/session (Holy Fire Reiki — 75 min, private pay only)
 - **Fonts:** Cormorant Garamond (display) + DM Sans (body)
 
 ## Contact Form
