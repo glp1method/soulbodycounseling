@@ -14,7 +14,9 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 - `blog-emdr.html` — "What EMDR Actually Feels Like — And Why It Works"
 - `blog-gay-men-carry.html` — "What Gay Men Carry That Nobody Talks About in Therapy"
 - `blog-harm-reduction.html` — "Harm Reduction Isn't Giving Up: Rethinking Recovery"
-- `sitemap.xml` — All 8 pages; submit to Google Search Console when pushing new posts
+- `blog-reiki.html` — "What Science Actually Says About How Reiki Works"
+- `blog-bdsm-container.html` — "BDSM, Trauma & the Healing Power of Power Exchange"
+- `sitemap.xml` — All 10 pages; submit to Google Search Console when pushing new posts
 - `robots.txt` — Allow all, points to sitemap
 - `styles.css` — All global styles
 - `main.js` — Nav toggle and shared JS
