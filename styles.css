@@ -443,7 +443,7 @@ section { padding: 7rem 0; }
 
 .audience-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -493,8 +493,7 @@ section { padding: 7rem 0; }
 }
 .modality-item:hover { background: rgba(196, 113, 74, 0.04); }
 .modality-item:nth-child(even) { border-right: none; }
-.modality-item:nth-child(3),
-.modality-item:nth-child(4) { border-bottom: none; }
+.modality-item:nth-child(5) { border-bottom: none; border-right: none; }
 
 .modality-num {
   font-family: var(--font-display);
@@ -808,7 +807,6 @@ section { padding: 7rem 0; }
   .audience-grid { grid-template-columns: 1fr; }
   .modalities-list { grid-template-columns: 1fr; }
   .modality-item:nth-child(even) { border-right: 1px solid rgba(196, 113, 74, 0.15); }
-  .modality-item:nth-child(3) { border-bottom: 1px solid rgba(196, 113, 74, 0.15); }
   .cta-inner { flex-direction: column; text-align: center; }
   .insurance-inner { flex-direction: column; text-align: center; }
 }
