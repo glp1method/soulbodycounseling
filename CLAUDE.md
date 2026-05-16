@@ -8,7 +8,7 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 ## Pages
 - `index.html` — Homepage (includes LocalBusiness JSON-LD schema)
 - `about.html` — Bio and photo (Guilfoyle.jpg.jpeg)
-- `services.html` — Therapy services + Wellness Sessions (Holy Fire Reiki), fees, insurance
+- `services.html` — Therapy services + Wellness Sessions (Holy Fire Reiki) + Clinical Supervision, fees, insurance
 - `contact.html` — Contact form (EmailJS), office address
 - `blog.html` — Resources/blog
 - `blog-emdr.html` — "What EMDR Actually Feels Like — And Why It Works"
@@ -24,7 +24,7 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 ## Key Details
 - **Location:** 3955 E Exposition Ave, Denver, CO 80209 (in-person) + virtual across Colorado
 - **Insurance:** Anthem, Cigna, United, Aetna
-- **Private pay:** $150/session (therapy) · $135/session (Holy Fire Reiki — 75 min, private pay only)
+- **Private pay:** $150/session (therapy) · $135/session (Holy Fire Reiki — 75 min, private pay only) · $150/session (individual supervision) · $90/person/session (group supervision, 2–4 people)
 - **Fonts:** Cormorant Garamond (display) + DM Sans (body)
 
 ## Contact Form
