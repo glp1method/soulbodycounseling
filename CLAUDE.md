@@ -16,7 +16,10 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 - `blog-harm-reduction.html` — "Harm Reduction Isn't Giving Up: Rethinking Recovery"
 - `blog-reiki.html` — "What Science Actually Says About How Reiki Works"
 - `blog-bdsm-container.html` — "BDSM, Trauma & the Healing Power of Power Exchange"
-- `sitemap.xml` — All 10 pages; submit to Google Search Console when pushing new posts
+- `blog-hookup-culture-intimacy.html` — "The App Is Open Again: Hookup Culture, Intimacy, and What We're Actually Looking For"
+- `blog-transpersonal-psychology.html` — "Beyond the Story You've Been Telling Yourself: An Introduction to Transpersonal Psychology"
+- `blog-auricular-detox.html` — "Five Needles, Two Ears, and a Surprising Amount of Science: The Story of Auricular Detox"
+- `sitemap.xml` — All 13 pages; submit to Google Search Console when pushing new posts
 - `robots.txt` — Allow all, points to sitemap
 - `styles.css` — All global styles
 - `main.js` — Nav toggle and shared JS
@@ -59,3 +62,4 @@ Direct, grounded, honest. Not clinical or life-coach-y. Written for gay and quee
 - Edit locally, preview with `start <file>.html`, then `git add`, `git commit`, `git push`
 - If push is rejected, run `git pull --rebase` then push again
 - All Psychology Today links have been removed — everything routes to contact.html
+- `CONTENT-CALENDAR.md` — tracks published blog posts and upcoming topics/dates; update it whenever a new post goes live
