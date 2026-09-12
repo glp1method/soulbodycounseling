@@ -14,6 +14,7 @@ Editorial calendar for the Resources/blog section. Cadence: 2 posts/month, biwee
 | 2026-05-16 | The App Is Open Again: Hookup Culture, Intimacy, and What We're Actually Looking For | `blog-hookup-culture-intimacy.html` |
 | 2026-05-16 | Beyond the Story You've Been Telling Yourself: An Introduction to Transpersonal Psychology | `blog-transpersonal-psychology.html` |
 | 2026-08-22 | Five Needles, Two Ears, and a Surprising Amount of Science: The Story of Auricular Detox | `blog-auricular-detox.html` |
+| 2026-09-12 | The Armor Nobody Taught You to Take Off | `blog-armor-masculinity.html` |
 
 ## Upcoming (Sept–Dec 2026)
 
@@ -21,7 +22,6 @@ Topics reviewed and approved. Dates are targets, not deadlines — shift as need
 
 | Target Date | Title (working) | Angle | Suggested slug | Status |
 |---|---|---|---|---|
-| 2026-09-04 | The Armor Nobody Taught You to Take Off | Emotional suppression in gay men, even inside queer community — direct hit on the worth-and-power through-line | `blog-masculinity-armor.html` | Not started |
 | 2026-09-18 | The Loneliness Nobody Believes You Have | Surrounded by community, still isolated — ties to loneliness-epidemic research; lands during Suicide Prevention Awareness Month without being a crisis post | `blog-loneliness.html` | Not started |
 | 2026-10-02 | What "Trauma Bonding" and "Attachment Style" Actually Mean | Myth-busts TikTok/AI therapy-speak with real clinical depth — grounded woo positioning against pop-psych oversimplification | `blog-attachment-therapy-speak.html` | Not started |
 | 2026-10-16 | Chemsex and Party-and-Play: Harm Reduction Without the Shame Spiral | Sequel to the harm reduction post, specific to this audience, no lecturing | `blog-chemsex-harm-reduction.html` | Not started |

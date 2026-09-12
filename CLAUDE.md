@@ -19,7 +19,8 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 - `blog-hookup-culture-intimacy.html` — "The App Is Open Again: Hookup Culture, Intimacy, and What We're Actually Looking For"
 - `blog-transpersonal-psychology.html` — "Beyond the Story You've Been Telling Yourself: An Introduction to Transpersonal Psychology"
 - `blog-auricular-detox.html` — "Five Needles, Two Ears, and a Surprising Amount of Science: The Story of Auricular Detox"
-- `sitemap.xml` — All 13 pages; submit to Google Search Console when pushing new posts
+- `blog-armor-masculinity.html` — "The Armor Nobody Taught You to Take Off"
+- `sitemap.xml` — All 14 pages; submit to Google Search Console when pushing new posts
 - `robots.txt` — Allow all, points to sitemap
 - `styles.css` — All global styles
 - `main.js` — Nav toggle and shared JS
