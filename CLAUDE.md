@@ -20,7 +20,8 @@ Static HTML/CSS/JS website for Zane Guilfoyle, LPC, LAC, ACS, ADS — a therapis
 - `blog-transpersonal-psychology.html` — "Beyond the Story You've Been Telling Yourself: An Introduction to Transpersonal Psychology"
 - `blog-auricular-detox.html` — "Five Needles, Two Ears, and a Surprising Amount of Science: The Story of Auricular Detox"
 - `blog-armor-masculinity.html` — "The Armor Nobody Taught You to Take Off"
-- `sitemap.xml` — All 14 pages; submit to Google Search Console when pushing new posts
+- `blog-psychedelic-therapy.html` — "Psychedelic-Assisted Therapy: What's Real, What's Hype, and Where I Stand"
+- `sitemap.xml` — All 15 pages; submit to Google Search Console when pushing new posts
 - `robots.txt` — Allow all, points to sitemap
 - `styles.css` — All global styles
 - `main.js` — Nav toggle and shared JS

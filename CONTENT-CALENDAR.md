@@ -15,23 +15,23 @@ Editorial calendar for the Resources/blog section. Cadence: 2 posts/month, biwee
 | 2026-05-16 | Beyond the Story You've Been Telling Yourself: An Introduction to Transpersonal Psychology | `blog-transpersonal-psychology.html` |
 | 2026-08-22 | Five Needles, Two Ears, and a Surprising Amount of Science: The Story of Auricular Detox | `blog-auricular-detox.html` |
 | 2026-09-12 | The Armor Nobody Taught You to Take Off | `blog-armor-masculinity.html` |
+| 2026-11-06 | Psychedelic-Assisted Therapy: What's Real, What's Hype, and Where I Stand | `blog-psychedelic-therapy.html` |
 
-## Upcoming (Sept–Dec 2026)
+## Upcoming (Nov 2026 – Jan 2027)
 
-Topics reviewed and approved. Dates are targets, not deadlines — shift as needed but keep the biweekly rhythm and update this table when a post goes live (add it to Published, update `sitemap.xml`, submit to Search Console per `CLAUDE.md`).
+Rescheduled 2026-11-06 after Sept–Oct posts slipped. Dates are targets, not deadlines — shift as needed but keep the biweekly rhythm and update this table when a post goes live (add it to Published, update `sitemap.xml`, submit to Search Console per `CLAUDE.md`). A monthly scheduled task drafts each month's posts for review.
 
 | Target Date | Title (working) | Angle | Suggested slug | Status |
 |---|---|---|---|---|
-| 2026-09-18 | The Loneliness Nobody Believes You Have | Surrounded by community, still isolated — ties to loneliness-epidemic research; lands during Suicide Prevention Awareness Month without being a crisis post | `blog-loneliness.html` | Not started |
-| 2026-10-02 | What "Trauma Bonding" and "Attachment Style" Actually Mean | Myth-busts TikTok/AI therapy-speak with real clinical depth — grounded woo positioning against pop-psych oversimplification | `blog-attachment-therapy-speak.html` | Not started |
-| 2026-10-16 | Chemsex and Party-and-Play: Harm Reduction Without the Shame Spiral | Sequel to the harm reduction post, specific to this audience, no lecturing | `blog-chemsex-harm-reduction.html` | Not started |
-| 2026-11-06 | Psychedelic-Assisted Therapy: What's Real, What's Hype, and Where I Stand | Ketamine's mainstream, ibogaine/psilocybin approaching FDA review — same honest-about-the-evidence tone as the NADA post | `blog-psychedelic-therapy.html` | Not started |
 | 2026-11-20 | No Roadmap for Getting Older as a Gay Man | Aging/midlife, underserved topic — echoes "no map, no mirror" language from about.html | `blog-aging-gay-men.html` | Not started |
 | 2026-12-04 | Grief That Doesn't Come From Death | Estrangement, chosen family, holiday-season family strain — seasonal fit | `blog-grief-not-death.html` | Not started |
-| 2026-12-18 | The Body Keeps Score on Shame Too | Internalized homophobia as a nervous-system issue, not just a narrative one — ties EMDR/somatic work to identity | `blog-shame-nervous-system.html` | Not started |
+| 2026-12-18 | The Loneliness Nobody Believes You Have | Surrounded by community, still isolated — ties to loneliness-epidemic research; holiday-season isolation angle (moved from Sept) | `blog-loneliness.html` | Not started |
+| 2027-01-08 | Chemsex and Party-and-Play: Harm Reduction Without the Shame Spiral | Sequel to the harm reduction post, specific to this audience, no lecturing; can link from the psychedelics post's ketamine section (moved from Oct) | `blog-chemsex-harm-reduction.html` | Not started |
+| 2027-01-22 | The Body Keeps Score on Shame Too | Internalized homophobia as a nervous-system issue, not just a narrative one — ties EMDR/somatic work to identity (moved from Dec) | `blog-shame-nervous-system.html` | Not started |
 
 ## Bench (approved concepts, not yet scheduled)
 
+- What "Trauma Bonding" and "Attachment Style" Actually Mean — myth-busting therapy-speak; benched 2026-11-06 (crowded topic, generic)
 - Non-monogamy / open relationships — extends the BDSM/power-exchange piece
 - Body image and gay men
 - Clinical supervision post for LPCc/LAC candidates — different reader (supervision business line, not therapy-client funnel)
